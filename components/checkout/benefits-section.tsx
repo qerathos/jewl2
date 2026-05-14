@@ -15,15 +15,15 @@ export function BenefitsSection() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-semibold text-foreground mb-2">O que você vai receber:</h2>
-        <p className="text-sm text-muted-foreground">Tudo que você precisa para começar a gerar renda com IA</p>
+        <h2 className="text-2xl font-bold text-foreground mb-2">O que você vai receber:</h2>
+        <p className="text-base text-muted-foreground">Tudo que você precisa para começar a gerar renda com IA hoje</p>
       </div>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {BENEFITS.map((benefit, index) => (
-          <div key={index} className="flex items-start gap-3">
+          <div key={index} className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/5 transition-colors">
             <div className="mt-0.5 flex-shrink-0">
-              <Check className="h-5 w-5 text-accent" strokeWidth={2.5} />
+              <Check className="h-5 w-5 text-accent flex-shrink-0" strokeWidth={3} />
             </div>
             <p className="text-sm text-foreground leading-snug">{benefit}</p>
           </div>

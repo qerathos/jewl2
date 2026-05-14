@@ -2,19 +2,24 @@ import { ShieldCheck } from 'lucide-react'
 
 export function GuaranteeSection() {
   return (
-    <div className="border border-accent/20 rounded-lg p-4 bg-accent/5 space-y-3">
-      <div className="flex items-start gap-3">
-        <ShieldCheck className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-        <div className="flex-1">
-          <h3 className="font-semibold text-foreground mb-1">Garantia de 30 dias</h3>
-          <p className="text-sm text-muted-foreground">
-            Se não gostar, devolvemos 100% do seu dinheiro. Sem perguntas. Sem complicações.
+    <div className="border-2 border-accent/30 rounded-lg p-6 bg-gradient-to-br from-accent/8 to-accent/5 space-y-4">
+      <div className="flex items-start gap-4">
+        <div className="p-2 rounded-lg bg-accent/20">
+          <ShieldCheck className="h-6 w-6 text-accent flex-shrink-0" strokeWidth={1.5} />
+        </div>
+        <div className="flex-1 min-w-0">
+          <h3 className="font-bold text-foreground mb-2 text-lg">Garantia de 30 dias</h3>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            Se não estiver 100% satisfeito, devolvemos seu dinheiro integralmente. 
+            <span className="block mt-1 font-semibold text-foreground">Sem perguntas. Sem complicações.</span>
           </p>
         </div>
       </div>
-      <p className="text-xs text-muted-foreground pl-9">
-        Essa é a nossa promessa de qualidade. Queremos que você tenha 100% de confiança.
-      </p>
+      <div className="pt-3 border-t border-accent/20">
+        <p className="text-xs text-muted-foreground leading-relaxed">
+          Nossa garantia demonstra total confiança na qualidade do conteúdo. Você tem 30 dias para explorar tudo e decidir.
+        </p>
+      </div>
     </div>
   )
 }

@@ -48,21 +48,23 @@ function FAQItem({
   onToggle: () => void
 }) {
   return (
-    <div className="border border-border rounded-lg overflow-hidden">
+    <div className={`border border-border rounded-lg overflow-hidden transition-all ${
+      isOpen ? 'bg-card/60 border-accent/30' : 'bg-card/40 hover:bg-card/50'
+    }`}>
       <button
         onClick={onToggle}
-        className="w-full px-4 py-4 flex items-start justify-between gap-3 hover:bg-accent/5 transition-colors text-left"
+        className="w-full px-5 py-4 flex items-start justify-between gap-3 hover:bg-accent/5 transition-colors text-left"
       >
-        <span className="font-medium text-foreground text-sm leading-snug">{question}</span>
+        <span className="font-semibold text-foreground text-sm leading-snug">{question}</span>
         <ChevronDown
-          className={`h-5 w-5 text-muted-foreground flex-shrink-0 transition-transform ${
+          className={`h-5 w-5 text-accent flex-shrink-0 transition-transform duration-300 ${
             isOpen ? 'rotate-180' : ''
           }`}
-          strokeWidth={1.5}
+          strokeWidth={2}
         />
       </button>
       {isOpen && (
-        <div className="border-t border-border px-4 py-4 bg-accent/3">
+        <div className="border-t border-accent/20 px-5 py-4 bg-accent/3">
           <p className="text-sm text-muted-foreground leading-relaxed">{answer}</p>
         </div>
       )}
@@ -76,8 +78,8 @@ export function FAQSection() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-semibold text-foreground mb-1">Perguntas frequentes:</h2>
-        <p className="text-sm text-muted-foreground">Tudo que você precisa saber antes de começar</p>
+        <h2 className="text-2xl font-bold text-foreground mb-2">Perguntas frequentes</h2>
+        <p className="text-base text-muted-foreground">Tudo que você precisa saber antes de começar</p>
       </div>
 
       <div className="space-y-3">

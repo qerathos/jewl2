@@ -41,25 +41,30 @@ export function SocialProofSection() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-semibold text-foreground mb-1">O que dizem nossos alunos:</h2>
-        <p className="text-sm text-muted-foreground">+2.300 membros já transformaram sua renda</p>
+        <h2 className="text-2xl font-bold text-foreground mb-2">O que dizem nossos alunos:</h2>
+        <p className="text-base text-muted-foreground">Pessoas reais obtendo resultados reais</p>
       </div>
 
       <div className="grid grid-cols-1 gap-4">
         {TESTIMONIALS.map((testimonial, index) => (
-          <div key={index} className="border border-border rounded-lg p-4 bg-card/50">
-            <StarRating rating={testimonial.rating} />
-            <p className="text-sm text-foreground leading-relaxed mt-3 mb-4">
+          <div key={index} className="border border-border/50 rounded-lg p-5 bg-card/60 backdrop-blur-sm hover:border-accent/30 hover:bg-card/80 transition-all">
+            <div className="flex items-start justify-between mb-3">
+              <StarRating rating={testimonial.rating} />
+              <span className="text-xs px-2.5 py-1 rounded-full bg-accent/10 text-accent font-semibold">
+                Verificado
+              </span>
+            </div>
+            <p className="text-sm text-foreground leading-relaxed mb-4 italic">
               &quot;{testimonial.text}&quot;
             </p>
-            <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-full bg-accent/20 flex items-center justify-center">
-                <span className="text-xs font-semibold text-accent">
+            <div className="flex items-center gap-3">
+              <div className="h-10 w-10 rounded-full bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center flex-shrink-0">
+                <span className="text-sm font-bold text-white">
                   {testimonial.name.charAt(0)}
                 </span>
               </div>
               <div>
-                <p className="text-sm font-medium text-foreground">{testimonial.name}</p>
+                <p className="text-sm font-semibold text-foreground">{testimonial.name}</p>
                 <p className="text-xs text-muted-foreground">{testimonial.role}</p>
               </div>
             </div>
@@ -67,20 +72,23 @@ export function SocialProofSection() {
         ))}
       </div>
 
-      <div className="flex items-center justify-center gap-2 pt-2">
-        <div className="flex -space-x-2">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2 border-t border-border/50">
+        <div className="flex -space-x-3">
           {[...Array(5)].map((_, i) => (
             <div
               key={i}
-              className="h-8 w-8 rounded-full bg-gradient-to-br from-accent to-accent/60 border-2 border-background flex items-center justify-center text-xs font-semibold text-white"
+              className="h-10 w-10 rounded-full bg-gradient-to-br from-accent to-accent/60 border-2 border-background flex items-center justify-center text-sm font-bold text-white hover:scale-110 transition-transform"
             >
               {String.fromCharCode(65 + i)}
             </div>
           ))}
         </div>
-        <p className="text-xs text-muted-foreground">
-          <span className="font-semibold text-foreground">2.300+</span> alunos confiam em nós
-        </p>
+        <div>
+          <p className="text-sm text-muted-foreground text-center sm:text-left">
+            <span className="font-bold text-foreground">2.300+</span> alunos transformando suas vidas
+          </p>
+          <p className="text-xs text-accent text-center sm:text-left">Nas últimas 6 meses</p>
+        </div>
       </div>
     </div>
   )
