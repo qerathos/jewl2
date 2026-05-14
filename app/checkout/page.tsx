@@ -1,3 +1,5 @@
+import Link from 'next/link'
+import { ArrowLeft } from 'lucide-react'
 import { BenefitsSection } from '@/components/checkout/benefits-section'
 import { GuaranteeSection } from '@/components/checkout/guarantee-section'
 import { SocialProofSection } from '@/components/checkout/social-proof-section'
@@ -17,9 +19,17 @@ export default function CheckoutPage() {
       <div className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
-            <div>
-              <p className="text-xs text-accent font-semibold uppercase tracking-wider">Oferta limitada</p>
-              <h1 className="text-xl sm:text-2xl font-bold text-foreground">Kit IA para Renda Extra</h1>
+            <div className="flex items-center gap-4">
+              <Link
+                href="/"
+                className="p-2 hover:bg-accent/10 rounded-lg transition-colors text-muted-foreground hover:text-foreground"
+              >
+                <ArrowLeft className="h-5 w-5" />
+              </Link>
+              <div>
+                <p className="text-xs text-accent font-semibold uppercase tracking-wider">Oferta limitada</p>
+                <h1 className="text-xl sm:text-2xl font-bold text-foreground">Kit IA para Renda Extra</h1>
+              </div>
             </div>
             <div className="text-right">
               <p className="text-2xl sm:text-3xl font-bold text-accent">€27</p>

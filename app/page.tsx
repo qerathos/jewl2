@@ -120,7 +120,7 @@ export default function CoursePage() {
 
             {/* Kit Landing Page */}
             <Link
-              href="/kit"
+              href="/checkout"
               className="block mt-6 bg-[oklch(0.12_0_0)] border-2 border-[oklch(0.82_0.19_155_/_0.35)] rounded-2xl p-8 md:p-12 hover:border-[oklch(0.82_0.19_155_/_0.7)] hover:shadow-[0_0_32px_oklch(0.82_0.19_155_/_0.12)] transition-all group"
             >
               <div className="flex flex-col md:flex-row items-center justify-between gap-6">
@@ -139,7 +139,33 @@ export default function CoursePage() {
                   </div>
                 </div>
                 <span className="bg-[oklch(0.82_0.19_155)] text-[oklch(0.08_0_0)] px-6 py-3 rounded-xl font-bold group-hover:shadow-[0_0_20px_oklch(0.82_0.19_155_/_0.4)] transition-shadow shrink-0">
-                  Ver Pagina
+                  Comprar Agora
+                </span>
+              </div>
+            </Link>
+
+            {/* Dashboard Access */}
+            <Link
+              href="/dashboard"
+              className="block mt-6 bg-gradient-to-r from-accent/10 via-accent/5 to-accent/10 border-2 border-accent/30 rounded-2xl p-8 md:p-12 hover:border-accent/60 transition-all group"
+            >
+              <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div className="flex items-center gap-4">
+                  <div className="bg-accent/20 p-4 rounded-xl group-hover:bg-accent/30 transition-colors">
+                    <BookOpen className="w-8 h-8 text-accent" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-semibold text-accent uppercase tracking-wider">Área do Membro</span>
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mt-1">
+                      Acessar Dashboard
+                    </h3>
+                    <p className="text-muted-foreground mt-1">
+                      Veja seus módulos, progresso e recursos exclusivos.
+                    </p>
+                  </div>
+                </div>
+                <span className="bg-accent text-accent-foreground px-6 py-3 rounded-xl font-semibold group-hover:opacity-90 transition-opacity shrink-0">
+                  Entrar
                 </span>
               </div>
             </Link>
