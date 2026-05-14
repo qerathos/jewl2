@@ -1,0 +1,60 @@
+/* Kit IA — Dark landing page design tokens */
+.kit-page {
+  --kit-bg: oklch(0.08 0 0);
+  --kit-bg-card: oklch(0.12 0 0);
+  --kit-bg-elevated: oklch(0.15 0 0);
+  --kit-fg: oklch(0.97 0 0);
+  --kit-fg-muted: oklch(0.62 0 0);
+  --kit-fg-subtle: oklch(0.38 0 0);
+  --kit-border: oklch(0.22 0 0);
+  --kit-neon: oklch(0.82 0.19 155);
+  --kit-neon-dim: oklch(0.82 0.19 155 / 0.12);
+  --kit-neon-glow: 0 0 24px oklch(0.82 0.19 155 / 0.45);
+  --kit-radius: 0.875rem;
+}
+
+.kit-page .kit-neon-text {
+  color: var(--kit-neon);
+}
+
+.kit-page .kit-border-neon {
+  border-color: var(--kit-neon);
+}
+
+.kit-page .kit-btn-primary {
+  background: var(--kit-neon);
+  color: oklch(0.08 0 0);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  transition: box-shadow 0.2s, opacity 0.2s;
+}
+
+.kit-page .kit-btn-primary:hover {
+  box-shadow: var(--kit-neon-glow);
+  opacity: 0.92;
+}
+
+.kit-page .kit-card {
+  background: var(--kit-bg-card);
+  border: 1px solid var(--kit-border);
+  border-radius: var(--kit-radius);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.kit-page .kit-card:hover {
+  border-color: oklch(0.82 0.19 155 / 0.4);
+  box-shadow: 0 0 0 1px oklch(0.82 0.19 155 / 0.15);
+}
+
+.kit-page .kit-section-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--kit-neon);
+}
+
+.kit-page .kit-divider {
+  height: 1px;
+  background: var(--kit-border);
+}
