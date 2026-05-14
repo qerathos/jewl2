@@ -7,8 +7,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Ganhar Dinheiro com ChatGPT — Mini Curso',
-  description: 'Aprende a usar IA para gerar renda extra online. Curso prático para iniciantes completos.',
+  title: 'IA Academy — Dashboard do Curso',
+  description: 'Plataforma de aprendizagem para dominar o ChatGPT e gerar renda online.',
   generator: 'v0.app',
   icons: {
     icon: [
